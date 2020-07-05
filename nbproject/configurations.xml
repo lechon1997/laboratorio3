@@ -9,7 +9,9 @@
       <itemPath>Fabrica.h</itemPath>
       <itemPath>ISistema.h</itemPath>
       <itemPath>Menu.h</itemPath>
+      <itemPath>Mozo.h</itemPath>
       <itemPath>Producto.h</itemPath>
+      <itemPath>Repartidor.h</itemPath>
       <itemPath>Sistema.h</itemPath>
     </logicalFolder>
     <logicalFolder name="f1" displayName="HeaderColecciones" projectFiles="true">
@@ -18,6 +20,7 @@
       <itemPath>../../../Desktop/ColeccionesG/IDictionary.h</itemPath>
       <itemPath>../../../Desktop/ColeccionesG/IIterator.h</itemPath>
       <itemPath>../../../Desktop/ColeccionesG/IKey.h</itemPath>
+      <itemPath>KeyInt.h</itemPath>
       <itemPath>KeyString.h</itemPath>
       <itemPath>../../../Desktop/ColeccionesG/ListDiccIterator.h</itemPath>
       <itemPath>../../../Desktop/ColeccionesG/ListDiccIteratorKey.h</itemPath>
@@ -53,7 +56,9 @@
       <itemPath>Empleado.cpp</itemPath>
       <itemPath>Fabrica.cpp</itemPath>
       <itemPath>Menu.cpp</itemPath>
+      <itemPath>Mozo.cpp</itemPath>
       <itemPath>Producto.cpp</itemPath>
+      <itemPath>Repartidor.cpp</itemPath>
       <itemPath>Sistema.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -61,6 +66,7 @@
       <itemPath>../../../Desktop/ColeccionesG/ICollectible.cpp</itemPath>
       <itemPath>../../../Desktop/ColeccionesG/IDictionary.cpp</itemPath>
       <itemPath>../../../Desktop/ColeccionesG/IKey.cpp</itemPath>
+      <itemPath>KeyInt.cpp</itemPath>
       <itemPath>KeyString.cpp</itemPath>
       <itemPath>../../../Desktop/ColeccionesG/ListDiccIterator.cpp</itemPath>
       <itemPath>../../../Desktop/ColeccionesG/ListDiccIteratorKey.cpp</itemPath>
@@ -254,6 +260,10 @@
       </item>
       <item path="ISistema.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="KeyInt.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="KeyInt.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="KeyString.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="KeyString.h" ex="false" tool="3" flavor2="0">
@@ -262,9 +272,17 @@
       </item>
       <item path="Menu.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Mozo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mozo.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Producto.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Producto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Repartidor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Repartidor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Sistema.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -455,6 +473,10 @@
       </item>
       <item path="ISistema.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="KeyInt.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="KeyInt.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="KeyString.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="KeyString.h" ex="false" tool="3" flavor2="0">
@@ -463,9 +485,17 @@
       </item>
       <item path="Menu.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Mozo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mozo.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Producto.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Producto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Repartidor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Repartidor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Sistema.cpp" ex="false" tool="1" flavor2="0">
       </item>

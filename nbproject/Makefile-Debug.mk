@@ -54,9 +54,12 @@ OBJECTFILES= \
 	${OBJECTDIR}/DtTrasnporte.o \
 	${OBJECTDIR}/Empleado.o \
 	${OBJECTDIR}/Fabrica.o \
+	${OBJECTDIR}/KeyInt.o \
 	${OBJECTDIR}/KeyString.o \
 	${OBJECTDIR}/Menu.o \
+	${OBJECTDIR}/Mozo.o \
 	${OBJECTDIR}/Producto.o \
+	${OBJECTDIR}/Repartidor.o \
 	${OBJECTDIR}/Sistema.o \
 	${OBJECTDIR}/main.o
 
@@ -180,6 +183,11 @@ ${OBJECTDIR}/Fabrica.o: Fabrica.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Fabrica.o Fabrica.cpp
 
+${OBJECTDIR}/KeyInt.o: KeyInt.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/KeyInt.o KeyInt.cpp
+
 ${OBJECTDIR}/KeyString.o: KeyString.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -190,10 +198,20 @@ ${OBJECTDIR}/Menu.o: Menu.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Menu.o Menu.cpp
 
+${OBJECTDIR}/Mozo.o: Mozo.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mozo.o Mozo.cpp
+
 ${OBJECTDIR}/Producto.o: Producto.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Producto.o Producto.cpp
+
+${OBJECTDIR}/Repartidor.o: Repartidor.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Repartidor.o Repartidor.cpp
 
 ${OBJECTDIR}/Sistema.o: Sistema.cpp
 	${MKDIR} -p ${OBJECTDIR}

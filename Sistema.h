@@ -20,6 +20,7 @@ private:
     string tipoProductoRecordado;
     Comun* comunRecorado;
     Menu* menuRecordado;
+    int numeroEmpleado;
     Sistema();
     
 public:

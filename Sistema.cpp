@@ -5,6 +5,9 @@
 #include "KeyString.h"
 #include "DtProducto.h"
 #include "Producto.h"
+#include "KeyInt.h"
+#include "Mozo.h"
+#include "Repartidor.h"
 #include "Comun.h"
 #include <cstddef>
 #include <iostream>
@@ -13,6 +16,7 @@
 Sistema* Sistema::sistema = NULL;
 
 Sistema::Sistema() {
+    this->numeroEmpleado=1;
     this->productos = new ListDicc;
     this->empleados = new ListDicc;
     this->comunRecorado = NULL;
@@ -21,6 +25,7 @@ Sistema::Sistema() {
     this->codigoRecordado="";
     this->nombreEmpleado="";
     this->tipoEmpleado="";
+    this->tipo=PIE;
     //PRODUCTO DE PRUEBA,LUEGO BORRAR
     Comun* c = new Comun("1","milanesa",300);
     KeyString* key = new KeyString(c->getCodigo());
@@ -269,9 +274,21 @@ void Sistema::seleccionarTransporte(Transportes tipo){
 }
 
 void Sistema::confirmarEmpleado(){
-
+    if(this->tipoEmpleado == "Repartidor"){
+        Repartidor* r = new Repartidor(this->numeroEmpleado,this->nombreEmpleado,this->tipo);
+        KeyInt* key = new KeyInt(this->numeroEmpleado);
+        this->empleados->add(r,key);
+        
+    }else if(this->tipoEmpleado == "Mozo"){
+        Mozo* m = new Mozo(this->numeroEmpleado,this->nombreEmpleado);
+        KeyInt* key = new KeyInt(this->numeroEmpleado);
+        this->empleados->add(m,key);
+    }
+     this->numeroEmpleado++;
+     this->tipoEmpleado="";
 }
 
 void Sistema::cancelarEmpleado(){
-
+    this->nombreEmpleado="";
+    this->tipo=PIE;
 }

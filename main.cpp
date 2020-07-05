@@ -241,10 +241,22 @@ void AltaEmpleado(){
             
          }         
 
-         cout<<"Desea dar de alta al empleado?"<<endl;
+         cout<<"\nDesea dar de alta al empleado?"<<endl;
+         cout<<"1.Confirmar\n2.Cancelar\nIngresar opcion: ";
+         cin>>opcion;
+         if(opcion == 1){
+             Sistema->confirmarEmpleado();
+             cout<<"\nEmpleado dado de alta con exito\n"<<endl;
+         }else{
+             Sistema->cancelarEmpleado();
+             cout<<"\nEmpleado cancelado\n"<<endl;    
+         }
+         
+         cout<<"\ndesea dar de alta otro emppleado?"<<endl;
          cout<<"1.SI\n2.No\nIngresar opcion: ";
          cin>>opcion;
-         if(opcion==1)
+         if(opcion == 2)
+             cout<<endl;break;
              
     }
 }
