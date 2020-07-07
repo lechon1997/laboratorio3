@@ -68,6 +68,25 @@ DtMenu* Menu::getDtMenu(){
     return dtm;
 }
 
+
+DtMenu* Menu::getDtMenu(int cant){
+    string codigo = this->getCodigo();
+    string descripcion = this->getDescripcion();
+    float precio = this->getPrecio();
+    
+    ICollection* dts = new Lista;
+    IIterator* it = this->productosComun->getIteratorObj();
+    
+    while(it->hasNext()){
+        Comun* c = (Comun*)it->getCurrent();
+        DtProducto* p = c->getDatosProducto();
+        dts->add(p);
+        it->next();
+    }
+    DtMenu* dtm = new DtMenu(codigo,descripcion,precio,cant,dts,this->productosComun);
+    return dtm;
+}
+
 void Menu::quitarProducto(Comun* c){
     this->productosComun->removeObj(c);
 }
@@ -77,4 +96,12 @@ bool Menu::menuVacio(){
     if(cantidad == 0)
         return true;
     return false;
+}
+
+int Menu::vecesQueSeEncuentraElProducto(KeyString* key){
+    int cant = 0;
+    DtInfoP* dti = (DtInfoP*)this->DtinfosP->find(key);
+    if(dti)
+        cant = dti->getCantidad();
+    return cant;
 }

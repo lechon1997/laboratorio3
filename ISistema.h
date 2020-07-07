@@ -5,6 +5,8 @@
 #include "ICollection.h"
 #include "DtTransporte.h"
 #include "tipoTransporte.h"
+#include "DtProducto.h"
+#include "DtMenu.h"
 using namespace std;
 class ISistema{
 public:
@@ -29,6 +31,11 @@ public:
     virtual void seleccionarTransporte(Transportes)=0;
     virtual void confirmarEmpleado()=0;
     virtual void cancelarEmpleado()=0;
+    virtual DtProducto* DatosProductoComun()=0;
+    virtual bool seleccionarProductoInfo(string)=0;
+    virtual DtMenu* DatosProductoMenu()=0;
+    virtual bool ComunOMenu()=0;
+    virtual bool Salir()=0;
 };
 
 

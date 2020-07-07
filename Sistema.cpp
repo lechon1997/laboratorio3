@@ -9,6 +9,7 @@
 #include "Mozo.h"
 #include "Repartidor.h"
 #include "Comun.h"
+#include "Venta.h"
 #include <cstddef>
 #include <iostream>
 
@@ -17,8 +18,10 @@ Sistema* Sistema::sistema = NULL;
 
 Sistema::Sistema() {
     this->numeroEmpleado=1;
+    this->numeroVenta=1;
     this->productos = new ListDicc;
     this->empleados = new ListDicc;
+    this->ventas = new ListDicc;
     this->comunRecorado = NULL;
     this->menuRecordado = NULL;
     this->tipoProductoRecordado="";
@@ -30,7 +33,7 @@ Sistema::Sistema() {
     Comun* c = new Comun("1","milanesa",300);
     KeyString* key = new KeyString(c->getCodigo());
     this->productos->add(c,key);
-    /*
+    
     Comun* c2 = new Comun("2","Pan",25);
     KeyString* key2 = new KeyString(c2->getCodigo());
     this->productos->add(c2,key2);
@@ -38,7 +41,13 @@ Sistema::Sistema() {
     Comun* c3 = new Comun("3","Churrasco",350);
     KeyString* key3 = new KeyString(c3->getCodigo());
     this->productos->add(c3,key3);
-    */
+    
+    Venta* v = new Venta(1);
+    KeyInt* key4 = new KeyInt(1);
+    v->agregarProductoAlaVenta(c,3);
+    v->agregarProductoAlaVenta(c2,2);
+    //v->facturarLaVenta();
+    this->ventas->add(v,key4);
 }
 
 
@@ -76,7 +85,6 @@ void Sistema::prueba(){
             it->next();
         }
 }
-//ALTA PRODUCTO
 
 int Sistema::cantProductos(){
     int cantidad = 0;
@@ -190,7 +198,6 @@ void Sistema::cancelar(){
     this->tipoProductoRecordado="";
 }
 
-//BAJA PRODUCTO
 
 ICollection* Sistema::listarTodo(){
     ICollection* dts = new Lista;
@@ -215,15 +222,45 @@ void Sistema::seleccionarProducto(string cod){
 }
 
 void Sistema::confirmarE(){
-    bool yaMeMovi = false;
+    bool yaMeMovi = false,vendoEsto,facturada;
     KeyString* key = new KeyString(this->codigoRecordado);
     Menu* m = dynamic_cast<Menu*>(this->productos->find(key));
+    
+    //verifico si esta facturada
+    
+    
     if(m != NULL){
+        IIterator* it = this->ventas->getIteratorObj();
+        while(it->hasNext()){
+            Venta* v = (Venta*)it->getCurrent();
+            vendoEsto = v->YoVendoEsto(m);
+            if(vendoEsto){
+                facturada = v->ventaFacturada();
+                if(!facturada)
+                    throw invalid_argument("\nEl producto se encuentra en ventas sin facturar");
+            }
+            it->next();
+        }
+        
         m->quitarProductos();
         this->productos->removeObj(m);
         delete m;
     }else{
         Comun* c = (Comun*) this->productos->find(key);
+        
+        IIterator* it2 = this->ventas->getIteratorObj();
+        while(it2->hasNext()){
+            Venta* v = (Venta*)it2->getCurrent();
+            vendoEsto = v->YoVendoEsto(c);
+            if(vendoEsto){
+                facturada = v->ventaFacturada();
+                if(!facturada)
+                    throw invalid_argument("\nEl producto se encuentra en ventas sin facturar");
+            }
+            it2->next();
+        }
+        
+        
         IIterator* it = this->productos->getIteratorObj();
         while(it->hasNext()){
             Menu* m = dynamic_cast<Menu*>(it->getCurrent());
@@ -292,3 +329,63 @@ void Sistema::cancelarEmpleado(){
     this->nombreEmpleado="";
     this->tipo=PIE;
 }
+
+bool Sistema::seleccionarProductoInfo(string codigo){
+  
+    KeyString* key = new KeyString(codigo);
+    ICollectible* cole = this->productos->find(key);
+    delete key;
+    if(cole){
+        this->codigoRecordado = codigo;
+        return true;
+    }
+    return false;
+}
+
+bool Sistema::ComunOMenu(){
+    KeyString* key = new KeyString(this->codigoRecordado);
+    Comun* c = dynamic_cast<Comun*>(this->productos->find(key));
+    if(c)
+        return true;
+    return false;
+}
+
+DtProducto* Sistema::DatosProductoComun(){
+    int cantUniVendidas=0;
+    KeyString* key = new KeyString(this->codigoRecordado);
+    Comun* c = (Comun*)this->productos->find(key);
+    IIterator* it = this->ventas->getIteratorObj();
+    
+    while(it->hasNext()){
+        Venta* v = (Venta*)it->getCurrent();
+        if(v->ventaFacturada()){
+            cantUniVendidas += v->cantVecesVendidoElProducto(c);
+        }
+        it->next();
+    }
+    delete it;
+    return new DtProducto(c->getCodigo(),c->getDescripcion(),c->getPrecio(),cantUniVendidas);
+}
+
+DtMenu* Sistema::DatosProductoMenu(){
+    int cantUniVendidas=0;
+    KeyString* key = new KeyString(this->codigoRecordado);
+    Menu* m = (Menu*)this->productos->find(key);
+    IIterator* it = this->ventas->getIteratorObj();
+    
+    while(it->hasNext()){
+       Venta* v = (Venta*)it->getCurrent();
+       if(v->ventaFacturada()){
+           cantUniVendidas += v->cantVecesVendidoElProducto(m);
+       }
+       it->next();
+    }
+    delete it;
+    return m->getDtMenu(cantUniVendidas);
+}
+
+bool Sistema::Salir(){
+    this->codigoRecordado="";
+    return true;
+}
+ 

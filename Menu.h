@@ -21,6 +21,8 @@ class Menu:public Producto{
        void ingresarDtInfoP(DtInfoP*);
        bool menuVacio();
        DtMenu* getDtMenu();
+       DtMenu* getDtMenu(int);//Lo hago asi,alta paja buscarle otra solucion
+       int vecesQueSeEncuentraElProducto(KeyString*);
 };
 
 #endif /* MENU_H */

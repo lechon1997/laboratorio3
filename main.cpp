@@ -42,6 +42,7 @@ int main(int argc, char** argv) {
                     cout<<"1.Alta producto"<<endl;
                     cout<<"2.Baja producto"<<endl;
                     cout<<"3.Alta empleado"<<endl;
+                    cout<<"4.Informacion de un producto"<<endl;
                     cout<<"Ingrese opcion: ";
                     cin>>opcion2;
                     switch(opcion2){
@@ -53,6 +54,9 @@ int main(int argc, char** argv) {
                             break; 
                         case 3:
                             AltaEmpleado();
+                            break;
+                        case 4:
+                            InformacionDeUnProducto();
                             break;
                         default:
                             cout<<"Vaciar el buffer"<<endl;
@@ -191,7 +195,70 @@ void BajaProducto(){
 }   
 
 void InformacionDeUnProducto(){
+    string codigo;
+    int opcion = 0;
+    bool estado = false,existe;
     
+    while(estado == false){
+        cout<<"\n-----Informacion de un producto-----\n"<<endl;
+        ICollection* dts = Sistema->listarTodo();
+        IIterator* it = dts->iterator();
+    
+        cout<<"\n----PRODUCTOS----\n"<<endl;
+    
+        while(it->hasNext()){
+            DtMenu* m = dynamic_cast<DtMenu*>(it->getCurrent());
+            if(m){
+                cout<<"Codigo: "<<m->getCodigo()<<endl;
+                cout<<"Descripcion: "<<m->getDescripcion()<<endl;
+            }else{
+                 DtProducto* c = (DtProducto*)it->getCurrent();
+                 cout<<"Codigo: "<<c->getCodigo()<<endl;
+                 cout<<"Descripcion: "<<c->getDescripcion()<<endl;
+            }   
+        cout<<endl;
+        it->next();
+        } 
+    
+        cout<<"Ingresar codigo: ";
+        cin>>codigo;
+        existe = Sistema->seleccionarProductoInfo(codigo);
+        if(existe){
+            estado = Sistema->ComunOMenu();
+            if(estado){
+                 DtProducto* dtp = Sistema->DatosProductoComun();
+                 cout<<"\nCodigo: "<<dtp->getCodigo()<<endl;
+                 cout<<"Descripcion: "<<dtp->getDescripcion()<<endl;
+                 cout<<"Precio: "<<dtp->getPrecio()<<endl;
+                 cout<<"Unidades vendidas: "<<dtp->getUnidadesVendidas()<<endl;
+            }else{
+                 DtMenu* dtm = Sistema->DatosProductoMenu();
+                 cout<<"\nCodigo: "<<dtm->getCodigo()<<endl;
+                 cout<<"Descripcion :"<<dtm->getDescripcion()<<endl;
+                 cout<<"Precio: "<<dtm->getPrecio()<<endl;
+            
+                 ICollection* dtsp = dtm->getDatosProductos();
+                 IIterator* it = dtsp->iterator();
+                 cout<<"   \n----Productos del menu----\n"<<endl;
+            
+                 while(it->hasNext()){
+                    DtProducto* p = (DtProducto*)it->getCurrent();
+                    cout<<"     Codigo:"<<p->getCodigo()<<endl;
+                    cout<<"     Descripcion:"<<p->getDescripcion()<<endl;
+                    cout<<"     Precio:"<<p->getPrecio()<<endl;
+                    cout<<endl;
+                    it->next();
+                }
+            }
+        }else{
+            cout<<"\nCodigo ingresado incorrecto"<<endl;
+            cout<<"Desea volver a intentarlo?\n1.Si\n2.No\nIngresar Opcion :";
+            cin>>opcion;
+            if(opcion == 2){
+                estado = Sistema->Salir();
+            }
+        }
+    }
 }
 
 
@@ -257,6 +324,5 @@ void AltaEmpleado(){
          cin>>opcion;
          if(opcion == 2)
              cout<<endl;break;
-             
     }
 }

@@ -7,12 +7,14 @@
       <itemPath>Comun.h</itemPath>
       <itemPath>Empleado.h</itemPath>
       <itemPath>Fabrica.h</itemPath>
+      <itemPath>Factura.h</itemPath>
       <itemPath>ISistema.h</itemPath>
       <itemPath>Menu.h</itemPath>
       <itemPath>Mozo.h</itemPath>
       <itemPath>Producto.h</itemPath>
       <itemPath>Repartidor.h</itemPath>
       <itemPath>Sistema.h</itemPath>
+      <itemPath>Venta.h</itemPath>
     </logicalFolder>
     <logicalFolder name="f1" displayName="HeaderColecciones" projectFiles="true">
       <itemPath>../../../Desktop/ColeccionesG/ICollectible.h</itemPath>
@@ -55,11 +57,13 @@
       <itemPath>Comun.cpp</itemPath>
       <itemPath>Empleado.cpp</itemPath>
       <itemPath>Fabrica.cpp</itemPath>
+      <itemPath>Factura.cpp</itemPath>
       <itemPath>Menu.cpp</itemPath>
       <itemPath>Mozo.cpp</itemPath>
       <itemPath>Producto.cpp</itemPath>
       <itemPath>Repartidor.cpp</itemPath>
       <itemPath>Sistema.cpp</itemPath>
+      <itemPath>Venta.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="f2" displayName="SourceColecciones" projectFiles="true">
@@ -258,6 +262,10 @@
       </item>
       <item path="Fabrica.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Factura.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Factura.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ISistema.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="KeyInt.cpp" ex="false" tool="1" flavor2="0">
@@ -287,6 +295,10 @@
       <item path="Sistema.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Sistema.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Venta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Venta.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -471,6 +483,10 @@
       </item>
       <item path="Fabrica.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Factura.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Factura.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ISistema.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="KeyInt.cpp" ex="false" tool="1" flavor2="0">
@@ -500,6 +516,10 @@
       <item path="Sistema.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Sistema.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Venta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Venta.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

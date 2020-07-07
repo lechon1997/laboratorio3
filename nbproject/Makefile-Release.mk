@@ -54,6 +54,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/DtTrasnporte.o \
 	${OBJECTDIR}/Empleado.o \
 	${OBJECTDIR}/Fabrica.o \
+	${OBJECTDIR}/Factura.o \
 	${OBJECTDIR}/KeyInt.o \
 	${OBJECTDIR}/KeyString.o \
 	${OBJECTDIR}/Menu.o \
@@ -61,6 +62,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Producto.o \
 	${OBJECTDIR}/Repartidor.o \
 	${OBJECTDIR}/Sistema.o \
+	${OBJECTDIR}/Venta.o \
 	${OBJECTDIR}/main.o
 
 
@@ -183,6 +185,11 @@ ${OBJECTDIR}/Fabrica.o: Fabrica.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Fabrica.o Fabrica.cpp
 
+${OBJECTDIR}/Factura.o: Factura.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Factura.o Factura.cpp
+
 ${OBJECTDIR}/KeyInt.o: KeyInt.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -217,6 +224,11 @@ ${OBJECTDIR}/Sistema.o: Sistema.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sistema.o Sistema.cpp
+
+${OBJECTDIR}/Venta.o: Venta.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Venta.o Venta.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

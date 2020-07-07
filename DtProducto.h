@@ -10,12 +10,15 @@ class DtProducto:public ICollectible{
         string codigo;
         string descripcion;
         float precio;
+        int unidadesVendidas;
     public:
         DtProducto(string,string,float);
+        DtProducto(string,string,float,int);
         ~DtProducto();
         string getCodigo();
         string getDescripcion();
         float getPrecio();
+        int getUnidadesVendidas();
             
 };
 
