@@ -4,10 +4,15 @@
 #include "DtProducto.h"
 #include "DtMenu.h"
 #include "tipoTransporte.h"
+#include "DtMozo.h"
+#include "DtEmpleado.h"
+#include "Mesa.h"
 #include <iostream>
 #include <cstdlib>
 #include <stdlib.h>
 #include <stdio.h>
+#include "KeyInt.h"
+#include "ListaDicc.h"
 
 using namespace std;
 
@@ -22,6 +27,9 @@ void AltaProducto();
 void AltaEmpleado();
 void BajaProducto();
 void InformacionDeUnProducto();
+void IniciarVentasEnMesas();
+void AsignarMozosAMesas();
+
 int main(int argc, char** argv) {
     
     int opcion=0,opcion2=0;    
@@ -69,9 +77,22 @@ int main(int argc, char** argv) {
                 }
                     break;
                 case 2 :
-                    cout<<"Opcion 2"<<endl;
+                    
+                    cout<<"1.Asignar automáticamente mozos a mesas"<<endl;
+                    cout<<"2.Iniciar venta en mesas"<<endl;
+                    cin>>opcion2;
+                    switch(opcion2){
+                        case 1:
+                            AsignarMozosAMesas();
+                            break;
+                        case 2:
+                            IniciarVentasEnMesas();
+                            break;
+                    }   
                     break;
+                    
             }
+             
            
     }
     return 0;
@@ -325,4 +346,93 @@ void AltaEmpleado(){
          if(opcion == 2)
              cout<<endl;break;
     }
+}
+
+void IniciarVentasEnMesas(){
+    int IDMozo,IDMesa,cantmesas;
+    DtMozo* dtMozo1;
+    string ingresarMesa="si",comfirmar;
+    
+    cout<<"\n-----Iniciar Venta En mesas-----\n"<<endl;
+    
+        cout<<"\nIngresar Identificador del mozo:\n"<<endl;
+        cin>>IDMozo;
+        dtMozo1 = Sistema->ObtenerMozo(IDMozo);
+        if(dtMozo1){
+            
+            cout<<"\nNombre del Mozo: \n"<<dtMozo1->getNombre()<<endl;
+            cout<<"\nMesas Asignadas:\n"<<endl;
+            IIterator* itmesas= dtMozo1->getMesas()->getIteratorObj();
+            
+            
+            cantmesas=0;
+            while(itmesas->hasNext()){
+                Mesa* MozoMesa= (Mesa*)itmesas->getCurrent();
+                if(MozoMesa->getVentaL()==NULL){
+                cout<<"\n Mesa numero: "<<MozoMesa->getNumero()<<"\n"<<endl;
+                cantmesas++;
+                }
+                itmesas->next();
+            }
+            
+            
+            if(cantmesas>0){
+            
+                
+            IDictionary * mesasSeleccionadas = new ListDicc;
+            while(ingresarMesa=="si"){
+                cout<<"\nQue mesa desea asignar la venta? (Nro de mesa) \n"<<endl;
+                cin>>IDMesa;
+                KeyInt* keym = new KeyInt(IDMesa);
+                Mesa* MesaAAsignar = (Mesa*)dtMozo1->getMesas()->find(keym);
+                if(MesaAAsignar){
+                mesasSeleccionadas->add(MesaAAsignar,keym);
+
+                cout<<"\nDesea Seguir Asignando? (si/no)\n"<<endl;
+                cin>>ingresarMesa;
+                }else{
+                    throw invalid_argument("la mesa no existe");
+                }
+                
+            }
+            
+            IIterator* itmesel=mesasSeleccionadas->getIteratorObj();
+            
+            cout<<"\nMesas Seleccionadas: \n"<<endl;
+            
+            while(itmesel->hasNext()){
+                Mesa* mesaSeleccionada = (Mesa*) itmesel->getCurrent();
+                
+                cout<<"\n Mesa numero: "<<mesaSeleccionada->getNumero()<<"\n"<<endl;
+                itmesel->next();
+            }
+            
+            cout<<"\n Comfirmar? (si/no) \n"<<endl;
+            cin>>comfirmar;
+            
+            if(comfirmar=="si"){
+                
+                 Sistema->AsignarMesas(dtMozo1,mesasSeleccionadas);
+                 cout<<"\n ----Ventas iniciadas---- \n"<<endl;
+                 
+            }else{
+                
+            }
+            
+            }else{
+                 cout<<"\n No tienes ninguna mesa disponible para iniciarle una venta.\n"<<endl;
+            }              
+        
+        }else{
+            cout<<"\nEl codigo identificador es incorrecto\n"<<endl;
+        }
+        
+}
+
+void AsignarMozosAMesas(){
+    
+    Sistema->AsignarMozosAMesasAuto();
+    
+    cout<<"\n Mesas asignadas correctamente.\n"<<endl;
+    
 }

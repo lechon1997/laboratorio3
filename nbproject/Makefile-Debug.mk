@@ -48,8 +48,10 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/5523a538/NodoDicc.o \
 	${OBJECTDIR}/_ext/5523a538/Par.o \
 	${OBJECTDIR}/Comun.o \
+	${OBJECTDIR}/DtEmpleado.o \
 	${OBJECTDIR}/DtInfoP.o \
 	${OBJECTDIR}/DtMenu.o \
+	${OBJECTDIR}/DtMozo.o \
 	${OBJECTDIR}/DtProducto.o \
 	${OBJECTDIR}/DtTrasnporte.o \
 	${OBJECTDIR}/Empleado.o \
@@ -58,11 +60,13 @@ OBJECTFILES= \
 	${OBJECTDIR}/KeyInt.o \
 	${OBJECTDIR}/KeyString.o \
 	${OBJECTDIR}/Menu.o \
+	${OBJECTDIR}/Mesa.o \
 	${OBJECTDIR}/Mozo.o \
 	${OBJECTDIR}/Producto.o \
 	${OBJECTDIR}/Repartidor.o \
 	${OBJECTDIR}/Sistema.o \
 	${OBJECTDIR}/Venta.o \
+	${OBJECTDIR}/VentaLocal.o \
 	${OBJECTDIR}/main.o
 
 
@@ -155,6 +159,11 @@ ${OBJECTDIR}/Comun.o: Comun.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Comun.o Comun.cpp
 
+${OBJECTDIR}/DtEmpleado.o: DtEmpleado.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtEmpleado.o DtEmpleado.cpp
+
 ${OBJECTDIR}/DtInfoP.o: DtInfoP.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -164,6 +173,11 @@ ${OBJECTDIR}/DtMenu.o: DtMenu.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtMenu.o DtMenu.cpp
+
+${OBJECTDIR}/DtMozo.o: DtMozo.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtMozo.o DtMozo.cpp
 
 ${OBJECTDIR}/DtProducto.o: DtProducto.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -205,6 +219,11 @@ ${OBJECTDIR}/Menu.o: Menu.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Menu.o Menu.cpp
 
+${OBJECTDIR}/Mesa.o: Mesa.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mesa.o Mesa.cpp
+
 ${OBJECTDIR}/Mozo.o: Mozo.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -229,6 +248,11 @@ ${OBJECTDIR}/Venta.o: Venta.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Venta.o Venta.cpp
+
+${OBJECTDIR}/VentaLocal.o: VentaLocal.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VentaLocal.o VentaLocal.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -8,6 +8,3 @@ Repartidor::~Repartidor(){
 
 }
 
-string Repartidor::getNombre(){
-    return this->getNombre();
-}

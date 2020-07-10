@@ -7,6 +7,8 @@
 #include "tipoTransporte.h"
 #include "DtProducto.h"
 #include "DtMenu.h"
+#include "DtMozo.h"
+#include "Mesa.h"
 using namespace std;
 class ISistema{
 public:
@@ -36,6 +38,9 @@ public:
     virtual DtMenu* DatosProductoMenu()=0;
     virtual bool ComunOMenu()=0;
     virtual bool Salir()=0;
+    virtual DtMozo* ObtenerMozo(int)=0;
+    virtual void AsignarMesas(DtMozo*,IDictionary*)=0;
+    virtual void AsignarMozosAMesasAuto()=0;
 };
 
 

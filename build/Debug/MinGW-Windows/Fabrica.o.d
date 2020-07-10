@@ -1,4 +1,4 @@
-build/Debug/MinGW-Windows/Factura.o: Factura.cpp Fabrica.h Sistema.h \
+build/Debug/MinGW-Windows/Fabrica.o: Fabrica.cpp Fabrica.h Sistema.h \
  ISistema.h ICollection.h IIterator.h ICollectible.h DtTransporte.h \
  tipoTransporte.h DtProducto.h DtMenu.h IDictionary.h IKey.h DtMozo.h \
  DtEmpleado.h Mesa.h VentaLocal.h Venta.h Factura.h Comun.h Producto.h \

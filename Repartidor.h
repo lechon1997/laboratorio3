@@ -10,7 +10,7 @@ class Repartidor:public Empleado{
     public:
         Repartidor(int,string,Transportes);
         ~Repartidor();
-        string getNombre();
+
             
 };
 

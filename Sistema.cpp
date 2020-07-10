@@ -10,8 +10,11 @@
 #include "Repartidor.h"
 #include "Comun.h"
 #include "Venta.h"
+#include "DtEmpleado.h"
 #include <cstddef>
 #include <iostream>
+#include <valarray>
+#include "Mesa.h"
 
 
 Sistema* Sistema::sistema = NULL;
@@ -21,6 +24,7 @@ Sistema::Sistema() {
     this->numeroVenta=1;
     this->productos = new ListDicc;
     this->empleados = new ListDicc;
+    this->mesas= new ListDicc;
     this->ventas = new ListDicc;
     this->comunRecorado = NULL;
     this->menuRecordado = NULL;
@@ -48,6 +52,28 @@ Sistema::Sistema() {
     v->agregarProductoAlaVenta(c2,2);
     //v->facturarLaVenta();
     this->ventas->add(v,key4);
+    cout<<"1";
+    //mozo y mesas de prueba
+    Mozo* m1= new Mozo(1,"Sergio Vergara Telechea");
+    KeyInt* keym1 = new KeyInt(m1->getNumero());
+    this->empleados->add(m1,keym1);
+    
+
+    IDictionary* mesas1 = new ListDicc;
+    Mesa* mesa1 = new Mesa(1);
+    KeyInt* keymesa1 = new KeyInt(1);
+    mesas1->add(mesa1,keymesa1);
+
+    Mesa* mesa2 = new Mesa(2);
+    KeyInt* keymesa2 = new KeyInt(2);
+    mesas1->add(mesa2,keymesa2);
+
+    Mesa* mesa3 = new Mesa(14);
+    KeyInt* keymesa3 = new KeyInt(14);
+    mesas1->add(mesa3,keymesa3);
+
+    m1->setMesas(mesas1);
+    
 }
 
 
@@ -388,4 +414,55 @@ bool Sistema::Salir(){
     this->codigoRecordado="";
     return true;
 }
+
+DtMozo* Sistema::ObtenerMozo(int ID){
+    KeyInt* key = new KeyInt(ID);
+
  
+    Mozo* m =dynamic_cast<Mozo*>(this->empleados->find(key));
+
+    if(m){
+
+        return m->toDTMozo();
+
+    }else{
+        throw invalid_argument("el mozo no existe");
+        return NULL;
+    }
+
+}
+
+
+void Sistema::AsignarMesas(DtMozo* dtmozo1,IDictionary* mesas){
+    KeyInt* key = new KeyInt(dtmozo1->getNumero());
+    Mozo* mozo = (Mozo*)this->empleados->find(key);
+    
+    IIterator* it= mesas->getIteratorObj();
+    
+    while(it->hasNext()){
+        
+        Mesa* me2 = (Mesa*)it->getCurrent();
+        int cod = (int)ventas->size();
+        cod=cod++;
+        KeyInt* keycod = new KeyInt(cod);
+        
+        VentaLocal* vl= new VentaLocal(cod);
+        ventas->add(vl,keycod);
+        me2->setVentaL(vl);
+        
+        it->next();
+    }
+    
+}
+
+void Sistema::AsignarMozosAMesasAuto(){
+    int mozos, mesas, result;
+    
+    mozos=this->empleados->size();
+    
+    mesas=this->mesas->size();
+    
+    result=floor(mesas/mozos);
+    
+    //while(result)
+}

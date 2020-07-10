@@ -3,9 +3,12 @@
 #define SISTEMA_H
 
 #include "ISistema.h"
+#include "DtMozo.h"
 #include "IDictionary.h"
 #include "Comun.h"
 #include "Menu.h"
+#include "Mozo.h"
+#include "Mesa.h"
 class Sistema:public ISistema{
 
 private:
@@ -15,6 +18,7 @@ private:
     IDictionary* empleados;
     IDictionary* ventas;
     Transportes tipo;
+    IDictionary* mesas;
     string nombreEmpleado;
     string tipoEmpleado;
     string codigoRecordado;
@@ -53,6 +57,9 @@ public:
     DtMenu* DatosProductoMenu();
     bool ComunOMenu();
     bool Salir();
+    DtMozo* ObtenerMozo(int);
+    void AsignarMesas(DtMozo*,IDictionary*);
+    void AsignarMozosAMesasAuto();
     
 };
  

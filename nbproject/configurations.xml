@@ -10,11 +10,13 @@
       <itemPath>Factura.h</itemPath>
       <itemPath>ISistema.h</itemPath>
       <itemPath>Menu.h</itemPath>
+      <itemPath>Mesa.h</itemPath>
       <itemPath>Mozo.h</itemPath>
       <itemPath>Producto.h</itemPath>
       <itemPath>Repartidor.h</itemPath>
       <itemPath>Sistema.h</itemPath>
       <itemPath>Venta.h</itemPath>
+      <itemPath>VentaLocal.h</itemPath>
     </logicalFolder>
     <logicalFolder name="f1" displayName="HeaderColecciones" projectFiles="true">
       <itemPath>../../../Desktop/ColeccionesG/ICollectible.h</itemPath>
@@ -35,8 +37,10 @@
       <itemPath>../../../Desktop/ColeccionesG/Par.h</itemPath>
     </logicalFolder>
     <logicalFolder name="f3" displayName="HeaderDataTypes" projectFiles="true">
+      <itemPath>DtEmpleado.h</itemPath>
       <itemPath>DtInfoP.h</itemPath>
       <itemPath>DtMenu.h</itemPath>
+      <itemPath>DtMozo.h</itemPath>
       <itemPath>DtProducto.h</itemPath>
       <itemPath>DtTransporte.h</itemPath>
       <itemPath>tipoTransporte.h</itemPath>
@@ -46,8 +50,10 @@
                    projectFiles="true">
     </logicalFolder>
     <logicalFolder name="f4" displayName="Source DataType" projectFiles="true">
+      <itemPath>DtEmpleado.cpp</itemPath>
       <itemPath>DtInfoP.cpp</itemPath>
       <itemPath>DtMenu.cpp</itemPath>
+      <itemPath>DtMozo.cpp</itemPath>
       <itemPath>DtProducto.cpp</itemPath>
       <itemPath>DtTrasnporte.cpp</itemPath>
     </logicalFolder>
@@ -59,11 +65,13 @@
       <itemPath>Fabrica.cpp</itemPath>
       <itemPath>Factura.cpp</itemPath>
       <itemPath>Menu.cpp</itemPath>
+      <itemPath>Mesa.cpp</itemPath>
       <itemPath>Mozo.cpp</itemPath>
       <itemPath>Producto.cpp</itemPath>
       <itemPath>Repartidor.cpp</itemPath>
       <itemPath>Sistema.cpp</itemPath>
       <itemPath>Venta.cpp</itemPath>
+      <itemPath>VentaLocal.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="f2" displayName="SourceColecciones" projectFiles="true">
@@ -238,6 +246,10 @@
       </item>
       <item path="Comun.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="DtEmpleado.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtEmpleado.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="DtInfoP.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DtInfoP.h" ex="false" tool="3" flavor2="0">
@@ -245,6 +257,10 @@
       <item path="DtMenu.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DtMenu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtMozo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtMozo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DtProducto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -280,6 +296,10 @@
       </item>
       <item path="Menu.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Mesa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mesa.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Mozo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Mozo.h" ex="false" tool="3" flavor2="0">
@@ -299,6 +319,10 @@
       <item path="Venta.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Venta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VentaLocal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VentaLocal.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -459,6 +483,10 @@
       </item>
       <item path="Comun.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="DtEmpleado.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtEmpleado.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="DtInfoP.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DtInfoP.h" ex="false" tool="3" flavor2="0">
@@ -466,6 +494,10 @@
       <item path="DtMenu.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DtMenu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtMozo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtMozo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DtProducto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -501,6 +533,10 @@
       </item>
       <item path="Menu.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Mesa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mesa.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Mozo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Mozo.h" ex="false" tool="3" flavor2="0">
@@ -520,6 +556,10 @@
       <item path="Venta.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Venta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VentaLocal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VentaLocal.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

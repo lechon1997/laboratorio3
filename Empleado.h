@@ -11,8 +11,9 @@ class Empleado:public ICollectible{
     public:
         Empleado(int,string);
         virtual ~Empleado();
-        virtual string getNombre()=0;
-        int getNumero();
+         string getNombre();
+         int getNumero();
+
 };
 
 #endif /* EMPLEADO_H */

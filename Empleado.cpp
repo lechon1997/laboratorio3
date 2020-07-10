@@ -12,3 +12,7 @@ Empleado::~Empleado(){
 int Empleado::getNumero(){
     return this->numero;
 }
+
+string Empleado::getNombre(){
+    return this->nombre;
+}
