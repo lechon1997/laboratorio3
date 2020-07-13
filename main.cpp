@@ -29,6 +29,7 @@ void BajaProducto();
 void InformacionDeUnProducto();
 void IniciarVentasEnMesas();
 void AsignarMozosAMesas();
+void QuitarProductoDeUnaVenta();
 
 int main(int argc, char** argv) {
     
@@ -87,6 +88,9 @@ int main(int argc, char** argv) {
                             break;
                         case 2:
                             IniciarVentasEnMesas();
+                            break;
+                        case 3:
+                            QuitarProductoDeUnaVenta();
                             break;
                     }   
                     break;
@@ -434,5 +438,62 @@ void AsignarMozosAMesas(){
     Sistema->AsignarMozosAMesasAuto();
     
     cout<<"\n Mesas asignadas correctamente.\n"<<endl;
-    
 }
+
+void QuitarProductoDeUnaVenta(){
+    int numeroMesa,cantidad,opcion,opcion2;
+    bool seguir = true;
+    string codigo;
+    
+    cout<<"\n----Quitar producto de una venta----.\n"<<endl;
+    cout<<"Ingresar numero de mesa: ";
+    cin>>numeroMesa;
+    Sistema->seleccionarMesa(numeroMesa);
+    
+    cout<<"\nProductos de la venta\n"<<endl;
+    
+    ICollection* dtsproductos  = Sistema->listarProductosVenta();
+    IIterator* it = dtsproductos->iterator();
+    
+    while(it->hasNext()){
+        DtProducto* dtp = dynamic_cast<DtProducto*>(it->getCurrent());
+        if(dtp){
+            cout<<"Codigo: "<<dtp->getCodigo()<<endl;
+            cout<<"Descripcion: "<<dtp->getDescripcion()<<endl;
+        }else{
+            DtMenu* dtm =(Menu*)it->getCurrent();
+            cout<<"Codigo: "<<dtm->getCodigo();
+            cout<<"Descripcion: "<<dtm->getDescripcion()<<endl;
+        }
+        cout<<endl;
+        it->next();
+    }
+    
+    while(seguir){
+        cout<<"Ingresar codigo producto: ";
+        cin>>codigo;
+        fflush(stdin);
+        Sistema->seleccionarProducto(codigo);
+        cout<<"Ingresar cantidad a remover: ";
+        cin>>cantidad;
+        Sistema->ingresarCantidad(cantidad);
+
+        cout<<"\nDesea condirmar?\n1.Si\n2.No\nIngresar opcion: ";
+        cin>>opcion;
+        if(opcion == 1){
+            Sistema->confirmarQuitarProducto();
+            cout<<"\nProducto quitado de la venta con exito\n"<<endl;
+        }else{
+            Sistema->cancelarQuitarProducto();
+            cout<<"\nEl producto no se quito de la venta\n"<<endl;
+        }
+        
+        cout<<"\nDesea seguir quitando productos de la venta?\n1.Si\n2.No\nIngresar Opcion: ";
+        cin>>opcion2;
+        
+        if(opcion2 == 2){
+            seguir == false;
+        }
+    }
+    Sistema->olvidarMesa();
+}   
