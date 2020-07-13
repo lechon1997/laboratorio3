@@ -13,6 +13,7 @@ class Venta:public ICollectible{
 private:
     IDictionary* productosEnLaVenta;
     IDictionary* cantidadDeCadaProducto;
+    IDictionary* mesasInvolucradas;
     Factura* factura;
     int numero;
     float montoTotal;
@@ -32,6 +33,8 @@ public:
     void agregarProductoAlaVenta(Producto*,int);
     void facturarLaVenta();
     bool YoVendoEsto(Producto*);
+    ICollection* obtenerProductosVenta();
+    void quitarProducto(int,string);
 };
 
 #endif /* VENTA_H */

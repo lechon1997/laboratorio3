@@ -16,3 +16,11 @@ string DtInfoP::getCodigo(){
 int DtInfoP::getCantidad(){
     return this->cantidad;
 }
+
+bool DtInfoP::restarCantidad(int c){
+
+    this->cantidad -= c;
+    if(this->cantidad == 0)
+        return true;
+    return false;
+}

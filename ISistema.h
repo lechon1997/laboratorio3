@@ -41,9 +41,12 @@ public:
     virtual DtMozo* ObtenerMozo(int)=0;
     virtual void AsignarMesas(DtMozo*,IDictionary*)=0;
     virtual void AsignarMozosAMesasAuto()=0;
+    virtual void seleccionarMesa(int)=0;
+    virtual ICollection* listarProductosVenta()=0;
+    virtual void ingresarCantidad(int)=0;
+    virtual void confirmarQuitarProducto()=0;
+    virtual void cancelarQuitarProducto()=0;
+    virtual void olvidarMesa()=0;
 };
-
-
-
 #endif /* ISISTEMA_H */
 

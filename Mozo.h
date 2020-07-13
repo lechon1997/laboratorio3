@@ -4,6 +4,8 @@
 #include "Empleado.h"
 #include "DtMozo.h"
 #include "IDictionary.h"
+#include "Mesa.h"
+#include "KeyInt.h"
 
 class Mozo:public Empleado{
     private:
@@ -12,7 +14,7 @@ class Mozo:public Empleado{
             DtMozo* toDTMozo();
             Mozo(int,string);
             ~Mozo();
-            void setMesas(IDictionary*);
+            void setMesas(Mesa*,KeyInt*);
             IDictionary* getMesas();
            
 };                      
