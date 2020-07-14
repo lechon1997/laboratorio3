@@ -1,6 +1,9 @@
 #include "Venta.h"
 #include "ListaDicc.h"
 #include "DtInfoP.h"
+#include "Lista.h"
+#include <iostream>
+#include <valarray>
 Venta::Venta(int numero){
     this->productosEnLaVenta = new ListDicc;
     this->cantidadDeCadaProducto = new ListDicc;
@@ -130,7 +133,7 @@ ICollection* Venta::obtenerProductosVenta(){
 void Venta::quitarProducto(int cant,string codigo){
     bool noHayMas;
     KeyString* key = new KeyString(codigo);
-    DtInfoP* dtip = this->cantidadDeCadaProducto->find(key);
+    DtInfoP* dtip =(DtInfoP*) this->cantidadDeCadaProducto->find(key);
     
     if(cant > dtip->getCantidad()){
         delete key;

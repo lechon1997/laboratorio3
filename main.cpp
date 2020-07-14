@@ -461,7 +461,7 @@ void QuitarProductoDeUnaVenta(){
             cout<<"Codigo: "<<dtp->getCodigo()<<endl;
             cout<<"Descripcion: "<<dtp->getDescripcion()<<endl;
         }else{
-            DtMenu* dtm =(Menu*)it->getCurrent();
+            DtMenu* dtm =(DtMenu*)it->getCurrent();
             cout<<"Codigo: "<<dtm->getCodigo();
             cout<<"Descripcion: "<<dtm->getDescripcion()<<endl;
         }
