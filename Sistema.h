@@ -19,6 +19,7 @@ private:
     IDictionary* ventas;
     Transportes tipo;
     IDictionary* mesas;
+    Mesa* mesaRecordada;
     string nombreEmpleado;
     string tipoEmpleado;
     string codigoRecordado;
@@ -27,6 +28,7 @@ private:
     Menu* menuRecordado;
     int numeroEmpleado;
     int numeroVenta;
+    int cantidad;
     Sistema();
     
 public:
@@ -60,7 +62,12 @@ public:
     DtMozo* ObtenerMozo(int);
     void AsignarMesas(DtMozo*,IDictionary*);
     void AsignarMozosAMesasAuto();
-    
+    void seleccionarMesa(int);
+    ICollection* listarProductosVenta();
+    void ingresarCantidad(int);
+    void confirmarQuitarProducto();
+    void cancelarQuitarProducto();
+    void olvidarMesa();
 };
  
 

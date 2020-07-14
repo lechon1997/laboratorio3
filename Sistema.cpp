@@ -21,8 +21,10 @@
 Sistema* Sistema::sistema = NULL;
 
 Sistema::Sistema() {
+    this->menuRecordado=NULL;
     this->numeroEmpleado=1;
     this->numeroVenta=1;
+    this->cantidad = 0;
     this->productos = new ListDicc;
     this->empleados = new ListDicc;
     this->mesas= new ListDicc;
@@ -250,6 +252,11 @@ ICollection* Sistema::listarTodo(){
 
 void Sistema::seleccionarProducto(string cod){
     this->codigoRecordado = cod;
+    KeyString* key = new KeyString(cod);
+    ICollectible* p = this->productos->find(key);
+    delete key;
+    if(!p)
+        throw invalid_argument("\nEl producto no existe\n");
 }
 
 void Sistema::confirmarE(){
@@ -436,8 +443,8 @@ DtMozo* Sistema::ObtenerMozo(int ID){
     }
 
 }
-
-
+    
+    
 void Sistema::AsignarMesas(DtMozo* dtmozo1,IDictionary* mesas){
     KeyInt* key = new KeyInt(dtmozo1->getNumero());
     Mozo* mozo = (Mozo*)this->empleados->find(key);
@@ -500,4 +507,37 @@ void Sistema::AsignarMozosAMesasAuto(){
         
     }
     
+    //while(result)
+}
+
+void Sistema::seleccionarMesa(int numeroM){
+    KeyInt* key = new KeyInt(numeroM);
+    Mesa* m = (Mesa*)this->mesas->find(key);
+    this->mesaRecordada = m;
+}
+
+ICollection* Sistema::listarProductosVenta(){
+    Venta* v = this->mesaRecordada->getVenta();
+    return v->obtenerProductosVenta();
+}
+
+void Sistema::ingresarCantidad(int cantidad){
+    this->cantidad = cantidad;
+}
+
+void Sistema::confirmarQuitarProducto(){
+    Venta* v = this->mesaRecordada->getVenta();
+    v->quitarProducto(this->cantidad,this->codigoRecordado);
+    
+    this->codigoRecordado="";
+    this->cantidad = 0;
+}
+
+void Sistema::cancelarQuitarProducto(){
+    this->codigoRecordado="";
+    this->cantidad = 0;
+}
+
+void Sistema::olvidarMesa(){
+    this->mesaRecordada = NULL;
 }

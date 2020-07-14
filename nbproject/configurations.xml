@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1"
+                   displayName="Header Colecciones"
+                   projectFiles="true"
+                   kind="ROOT">
+      <itemPath>ICollectible.h</itemPath>
+      <itemPath>ICollection.h</itemPath>
+      <itemPath>IDictionary.h</itemPath>
+      <itemPath>IIterator.h</itemPath>
+      <itemPath>IKey.h</itemPath>
+      <itemPath>KeyInt.h</itemPath>
+      <itemPath>KeyString.h</itemPath>
+      <itemPath>ListDiccIterator.h</itemPath>
+      <itemPath>ListDiccIteratorKey.h</itemPath>
+      <itemPath>ListDiccIteratorObj.h</itemPath>
+      <itemPath>Lista.h</itemPath>
+      <itemPath>ListaDicc.h</itemPath>
+      <itemPath>ListaIterator.h</itemPath>
+      <itemPath>NodoDicc.h</itemPath>
+      <itemPath>Par.h</itemPath>
+    </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
@@ -18,24 +38,6 @@
       <itemPath>Venta.h</itemPath>
       <itemPath>VentaLocal.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="f1" displayName="HeaderColecciones" projectFiles="true">
-      <itemPath>../../../Desktop/ColeccionesG/ICollectible.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/ICollection.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/IDictionary.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/IIterator.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/IKey.h</itemPath>
-      <itemPath>KeyInt.h</itemPath>
-      <itemPath>KeyString.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/ListDiccIterator.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/ListDiccIteratorKey.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/ListDiccIteratorObj.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/Lista.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/ListaDicc.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/ListaIterator.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/Nodo.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/NodoDicc.h</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/Par.h</itemPath>
-    </logicalFolder>
     <logicalFolder name="f3" displayName="HeaderDataTypes" projectFiles="true">
       <itemPath>DtEmpleado.h</itemPath>
       <itemPath>DtInfoP.h</itemPath>
@@ -48,6 +50,25 @@
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="f2"
+                   displayName="Source Colecciones"
+                   projectFiles="true"
+                   kind="ROOT">
+      <itemPath>ICollectible.cpp</itemPath>
+      <itemPath>IDictionary.cpp</itemPath>
+      <itemPath>IKey.cpp</itemPath>
+      <itemPath>KeyInt.cpp</itemPath>
+      <itemPath>KeyString.cpp</itemPath>
+      <itemPath>ListDiccIterator.cpp</itemPath>
+      <itemPath>ListDiccIteratorKey.cpp</itemPath>
+      <itemPath>ListDiccIteratorObj.cpp</itemPath>
+      <itemPath>Lista.cpp</itemPath>
+      <itemPath>ListaDicc.cpp</itemPath>
+      <itemPath>ListaIterator.cpp</itemPath>
+      <itemPath>Nodo.cpp</itemPath>
+      <itemPath>NodoDicc.cpp</itemPath>
+      <itemPath>Par.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="f4" displayName="Source DataType" projectFiles="true">
       <itemPath>DtEmpleado.cpp</itemPath>
@@ -74,22 +95,6 @@
       <itemPath>VentaLocal.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
-    <logicalFolder name="f2" displayName="SourceColecciones" projectFiles="true">
-      <itemPath>../../../Desktop/ColeccionesG/ICollectible.cpp</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/IDictionary.cpp</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/IKey.cpp</itemPath>
-      <itemPath>KeyInt.cpp</itemPath>
-      <itemPath>KeyString.cpp</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/ListDiccIterator.cpp</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/ListDiccIteratorKey.cpp</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/ListDiccIteratorObj.cpp</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/Lista.cpp</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/ListaDicc.cpp</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/ListaIterator.cpp</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/Nodo.cpp</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/NodoDicc.cpp</itemPath>
-      <itemPath>../../../Desktop/ColeccionesG/Par.cpp</itemPath>
-    </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
                    projectFiles="false"
@@ -112,136 +117,6 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="../../../Desktop/ColeccionesG/ICollectible.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ICollectible.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ICollection.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/IDictionary.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/IDictionary.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/IIterator.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/IKey.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/IKey.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIterator.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIterator.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIteratorKey.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIteratorKey.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIteratorObj.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIteratorObj.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Lista.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Lista.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListaDicc.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListaDicc.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListaIterator.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListaIterator.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Nodo.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Nodo.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/NodoDicc.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/NodoDicc.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Par.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Par.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="Comun.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Comun.h" ex="false" tool="3" flavor2="0">
@@ -282,6 +157,22 @@
       </item>
       <item path="Factura.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ICollectible.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ICollection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IDictionary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IDictionary.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IKey.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ISistema.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="KeyInt.cpp" ex="false" tool="1" flavor2="0">
@@ -291,6 +182,30 @@
       <item path="KeyString.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="KeyString.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIterator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorKey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorObj.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorObj.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Lista.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Lista.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListaDicc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListaDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListaIterator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListaIterator.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Menu.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -303,6 +218,16 @@
       <item path="Mozo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Mozo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Nodo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NodoDicc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NodoDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Par.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Par.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Producto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -349,136 +274,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="../../../Desktop/ColeccionesG/ICollectible.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ICollectible.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ICollection.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/IDictionary.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/IDictionary.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/IIterator.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/IKey.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/IKey.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIterator.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIterator.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIteratorKey.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIteratorKey.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIteratorObj.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListDiccIteratorObj.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Lista.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Lista.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListaDicc.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListaDicc.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListaIterator.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/ListaIterator.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Nodo.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Nodo.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/NodoDicc.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/NodoDicc.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Par.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../../Desktop/ColeccionesG/Par.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="Comun.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Comun.h" ex="false" tool="3" flavor2="0">
@@ -519,6 +314,22 @@
       </item>
       <item path="Factura.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ICollectible.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ICollection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IDictionary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IDictionary.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IKey.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ISistema.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="KeyInt.cpp" ex="false" tool="1" flavor2="0">
@@ -528,6 +339,30 @@
       <item path="KeyString.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="KeyString.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIterator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorKey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorObj.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorObj.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Lista.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Lista.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListaDicc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListaDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListaIterator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListaIterator.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Menu.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -540,6 +375,16 @@
       <item path="Mozo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Mozo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Nodo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NodoDicc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NodoDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Par.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Par.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Producto.cpp" ex="false" tool="1" flavor2="0">
       </item>

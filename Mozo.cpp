@@ -1,5 +1,3 @@
-#include <valarray>
-#include "DtMozo.h"
 #include "Mozo.h"
 #include "ListaDicc.h"
 
@@ -11,8 +9,8 @@ Mozo::~Mozo(){
 
 }
 
-void Mozo::setMesas(IDictionary* mesa1){
-    this->mezas=mesa1;
+void Mozo::setMesas(Mesa* m,KeyInt* k){
+    this->mezas->add(m,k);
 }
 
 DtMozo* Mozo::toDTMozo(){

@@ -1,9 +1,13 @@
 #include "Venta.h"
 #include "ListaDicc.h"
 #include "DtInfoP.h"
+#include "Lista.h"
+#include <iostream>
+#include <valarray>
 Venta::Venta(int numero){
     this->productosEnLaVenta = new ListDicc;
     this->cantidadDeCadaProducto = new ListDicc;
+    this->mesasInvolucradas = new ListDicc;
     this->factura = NULL;
     this->numero = numero;
 }
@@ -106,4 +110,42 @@ void Venta::agregarProductoAlaVenta(Producto* p,int cantidad){
 
 void Venta::facturarLaVenta(){
     this->factura = new Factura();
+}
+
+ICollection* Venta::obtenerProductosVenta(){
+    ICollection* productosVenta = new Lista;
+    IIterator* it = this->productosEnLaVenta->getIteratorObj();
+    while(it->hasNext()){
+        Comun* c = dynamic_cast<Comun*>(it->getCurrent());
+        if(c){
+            DtProducto* dtp = c->getDatosProducto();
+            productosVenta->add(dtp);
+        }else{
+            Menu* m = dynamic_cast<Menu*>(it->getCurrent());
+            DtMenu* dtm = m->getDtMenu();
+            productosVenta->add(dtm);
+        }
+        it->hasNext();
+    }
+    return productosVenta;
+}
+
+void Venta::quitarProducto(int cant,string codigo){
+    bool noHayMas;
+    KeyString* key = new KeyString(codigo);
+    DtInfoP* dtip =(DtInfoP*) this->cantidadDeCadaProducto->find(key);
+    
+    if(cant > dtip->getCantidad()){
+        delete key;
+        throw invalid_argument("La cantidad ingresada es mayor a la que hay en la venta");
+    }
+    
+    noHayMas = dtip->restarCantidad(cant);
+    
+    if(noHayMas){
+        this->cantidadDeCadaProducto->removeObj(dtip);
+        delete dtip;
+        this->productosEnLaVenta->removeKey(key);
+        delete key;
+    }
 }

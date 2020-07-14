@@ -17,7 +17,7 @@ class Mozo:public Empleado{
             DtMozo* toDTMozo();
             Mozo(int,string);
             ~Mozo();
-            void setMesas(IDictionary*);
+            void setMesas(Mesa*,KeyInt*);
             IDictionary* getMesas();
             void addMesa(Mesa*,int);
            

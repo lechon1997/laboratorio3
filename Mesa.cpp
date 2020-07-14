@@ -8,6 +8,8 @@
 
 Mesa::Mesa(int numero){
     this->numero=numero;
+    this->ventaL = NULL;
+    this->venta = NULL;
 }
 
 int Mesa::getNumero(){
@@ -19,4 +21,8 @@ VentaLocal* Mesa::getVentaL(){
 }
 void Mesa::setVentaL(VentaLocal* vl){
     this->ventaL = vl;
+}
+
+Venta* Mesa::getVenta(){
+    return this->venta;
 }

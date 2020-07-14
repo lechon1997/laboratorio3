@@ -16,18 +16,20 @@
 #include "ICollectible.h"
 #include "String"
 #include "VentaLocal.h"
+#include "Venta.h"
 
 using namespace std;
 class Mesa:public ICollectible{
     private:
         int numero;
-        VentaLocal* ventaL = NULL;
+        VentaLocal* ventaL;
+        Venta* venta;
     public:
         Mesa(int);
          int getNumero();
          VentaLocal* getVentaL();
          void setVentaL(VentaLocal*);
-         
+         Venta* getVenta();
 };
 
 #endif

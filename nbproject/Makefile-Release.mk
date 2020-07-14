@@ -35,18 +35,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/5523a538/ICollectible.o \
-	${OBJECTDIR}/_ext/5523a538/IDictionary.o \
-	${OBJECTDIR}/_ext/5523a538/IKey.o \
-	${OBJECTDIR}/_ext/5523a538/ListDiccIterator.o \
-	${OBJECTDIR}/_ext/5523a538/ListDiccIteratorKey.o \
-	${OBJECTDIR}/_ext/5523a538/ListDiccIteratorObj.o \
-	${OBJECTDIR}/_ext/5523a538/Lista.o \
-	${OBJECTDIR}/_ext/5523a538/ListaDicc.o \
-	${OBJECTDIR}/_ext/5523a538/ListaIterator.o \
-	${OBJECTDIR}/_ext/5523a538/Nodo.o \
-	${OBJECTDIR}/_ext/5523a538/NodoDicc.o \
-	${OBJECTDIR}/_ext/5523a538/Par.o \
 	${OBJECTDIR}/Comun.o \
 	${OBJECTDIR}/DtEmpleado.o \
 	${OBJECTDIR}/DtInfoP.o \
@@ -57,11 +45,23 @@ OBJECTFILES= \
 	${OBJECTDIR}/Empleado.o \
 	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/Factura.o \
+	${OBJECTDIR}/ICollectible.o \
+	${OBJECTDIR}/IDictionary.o \
+	${OBJECTDIR}/IKey.o \
 	${OBJECTDIR}/KeyInt.o \
 	${OBJECTDIR}/KeyString.o \
+	${OBJECTDIR}/ListDiccIterator.o \
+	${OBJECTDIR}/ListDiccIteratorKey.o \
+	${OBJECTDIR}/ListDiccIteratorObj.o \
+	${OBJECTDIR}/Lista.o \
+	${OBJECTDIR}/ListaDicc.o \
+	${OBJECTDIR}/ListaIterator.o \
 	${OBJECTDIR}/Menu.o \
 	${OBJECTDIR}/Mesa.o \
 	${OBJECTDIR}/Mozo.o \
+	${OBJECTDIR}/Nodo.o \
+	${OBJECTDIR}/NodoDicc.o \
+	${OBJECTDIR}/Par.o \
 	${OBJECTDIR}/Producto.o \
 	${OBJECTDIR}/Repartidor.o \
 	${OBJECTDIR}/Sistema.o \
@@ -93,66 +93,6 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/laboratorio3.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/laboratorio3 ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/_ext/5523a538/ICollectible.o: ../../../Desktop/ColeccionesG/ICollectible.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/ICollectible.o ../../../Desktop/ColeccionesG/ICollectible.cpp
-
-${OBJECTDIR}/_ext/5523a538/IDictionary.o: ../../../Desktop/ColeccionesG/IDictionary.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/IDictionary.o ../../../Desktop/ColeccionesG/IDictionary.cpp
-
-${OBJECTDIR}/_ext/5523a538/IKey.o: ../../../Desktop/ColeccionesG/IKey.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/IKey.o ../../../Desktop/ColeccionesG/IKey.cpp
-
-${OBJECTDIR}/_ext/5523a538/ListDiccIterator.o: ../../../Desktop/ColeccionesG/ListDiccIterator.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/ListDiccIterator.o ../../../Desktop/ColeccionesG/ListDiccIterator.cpp
-
-${OBJECTDIR}/_ext/5523a538/ListDiccIteratorKey.o: ../../../Desktop/ColeccionesG/ListDiccIteratorKey.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/ListDiccIteratorKey.o ../../../Desktop/ColeccionesG/ListDiccIteratorKey.cpp
-
-${OBJECTDIR}/_ext/5523a538/ListDiccIteratorObj.o: ../../../Desktop/ColeccionesG/ListDiccIteratorObj.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/ListDiccIteratorObj.o ../../../Desktop/ColeccionesG/ListDiccIteratorObj.cpp
-
-${OBJECTDIR}/_ext/5523a538/Lista.o: ../../../Desktop/ColeccionesG/Lista.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/Lista.o ../../../Desktop/ColeccionesG/Lista.cpp
-
-${OBJECTDIR}/_ext/5523a538/ListaDicc.o: ../../../Desktop/ColeccionesG/ListaDicc.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/ListaDicc.o ../../../Desktop/ColeccionesG/ListaDicc.cpp
-
-${OBJECTDIR}/_ext/5523a538/ListaIterator.o: ../../../Desktop/ColeccionesG/ListaIterator.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/ListaIterator.o ../../../Desktop/ColeccionesG/ListaIterator.cpp
-
-${OBJECTDIR}/_ext/5523a538/Nodo.o: ../../../Desktop/ColeccionesG/Nodo.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/Nodo.o ../../../Desktop/ColeccionesG/Nodo.cpp
-
-${OBJECTDIR}/_ext/5523a538/NodoDicc.o: ../../../Desktop/ColeccionesG/NodoDicc.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/NodoDicc.o ../../../Desktop/ColeccionesG/NodoDicc.cpp
-
-${OBJECTDIR}/_ext/5523a538/Par.o: ../../../Desktop/ColeccionesG/Par.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/5523a538
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5523a538/Par.o ../../../Desktop/ColeccionesG/Par.cpp
 
 ${OBJECTDIR}/Comun.o: Comun.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -204,6 +144,21 @@ ${OBJECTDIR}/Factura.o: Factura.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Factura.o Factura.cpp
 
+${OBJECTDIR}/ICollectible.o: ICollectible.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ICollectible.o ICollectible.cpp
+
+${OBJECTDIR}/IDictionary.o: IDictionary.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IDictionary.o IDictionary.cpp
+
+${OBJECTDIR}/IKey.o: IKey.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IKey.o IKey.cpp
+
 ${OBJECTDIR}/KeyInt.o: KeyInt.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -213,6 +168,36 @@ ${OBJECTDIR}/KeyString.o: KeyString.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/KeyString.o KeyString.cpp
+
+${OBJECTDIR}/ListDiccIterator.o: ListDiccIterator.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListDiccIterator.o ListDiccIterator.cpp
+
+${OBJECTDIR}/ListDiccIteratorKey.o: ListDiccIteratorKey.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListDiccIteratorKey.o ListDiccIteratorKey.cpp
+
+${OBJECTDIR}/ListDiccIteratorObj.o: ListDiccIteratorObj.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListDiccIteratorObj.o ListDiccIteratorObj.cpp
+
+${OBJECTDIR}/Lista.o: Lista.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Lista.o Lista.cpp
+
+${OBJECTDIR}/ListaDicc.o: ListaDicc.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaDicc.o ListaDicc.cpp
+
+${OBJECTDIR}/ListaIterator.o: ListaIterator.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaIterator.o ListaIterator.cpp
 
 ${OBJECTDIR}/Menu.o: Menu.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -228,6 +213,21 @@ ${OBJECTDIR}/Mozo.o: Mozo.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mozo.o Mozo.cpp
+
+${OBJECTDIR}/Nodo.o: Nodo.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nodo.o Nodo.cpp
+
+${OBJECTDIR}/NodoDicc.o: NodoDicc.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/NodoDicc.o NodoDicc.cpp
+
+${OBJECTDIR}/Par.o: Par.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Par.o Par.cpp
 
 ${OBJECTDIR}/Producto.o: Producto.cpp
 	${MKDIR} -p ${OBJECTDIR}

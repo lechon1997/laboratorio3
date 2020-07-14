@@ -13,6 +13,7 @@ class DtInfoP:public ICollectible{
         ~DtInfoP();
         string getCodigo();
         int getCantidad();
+        bool restarCantidad(int);
 };
 
 
