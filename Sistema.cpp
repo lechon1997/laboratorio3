@@ -81,6 +81,28 @@ Sistema::Sistema() {
 
    // m1->setMesas(mesas1);
     
+    Mozo* m2= new Mozo(2,"Ana Cabrera Lopez");
+    m2->setTipo(true);
+    KeyInt* keym2 = new KeyInt(m2->getNumero());
+    this->empleados->add(m2,keym2);
+    
+
+  //  IDictionary* mesas1 = new ListDicc;
+    Mesa* mesa4 = new Mesa(4);
+    KeyInt* keymesa4 = new KeyInt(4);
+    this->mesas->add(mesa4,keymesa4);
+   // mesas1->add(mesa1,keymesa1);
+
+    Mesa* mesa5 = new Mesa(5);
+    KeyInt* keymesa5 = new KeyInt(5);
+    this->mesas->add(mesa5,keymesa5);
+   // mesas1->add(mesa2,keymesa2);
+
+    Mesa* mesa6 = new Mesa(6);
+    KeyInt* keymesa6 = new KeyInt(6);
+    this->mesas->add(mesa6,keymesa6);
+    
+    
 }
 
 
