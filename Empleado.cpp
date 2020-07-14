@@ -16,3 +16,11 @@ int Empleado::getNumero(){
 string Empleado::getNombre(){
     return this->nombre;
 }
+
+bool Empleado::getTipo(){
+    return this->tipo;
+}
+
+void Empleado::setTipo(bool t){
+    this->tipo=t;
+}

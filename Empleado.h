@@ -8,11 +8,14 @@ class Empleado:public ICollectible{
     private:
         int numero;
         string nombre;
+        bool tipo;
     public:
         Empleado(int,string);
         virtual ~Empleado();
          string getNombre();
          int getNumero();
+         bool getTipo();
+         void setTipo(bool);
 
 };
 
