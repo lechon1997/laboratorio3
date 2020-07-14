@@ -10,6 +10,7 @@ Mesa::Mesa(int numero){
     this->numero=numero;
     this->ventaL = NULL;
     this->venta = NULL;
+    this->mozo = NULL;
 }
 
 int Mesa::getNumero(){
@@ -25,4 +26,12 @@ void Mesa::setVentaL(VentaLocal* vl){
 
 Venta* Mesa::getVenta(){
     return this->venta;
+}
+
+void Mesa::setMozo(Mozo* mozo) {
+    this->mozo = mozo;
+}
+
+Mozo* Mesa::getMozo() const {
+    return mozo;
 }

@@ -13,6 +13,8 @@
 #include <stdio.h>
 #include "KeyInt.h"
 #include "ListaDicc.h"
+#include "ModificarFechaHora.h"
+#include <memory>
 
 using namespace std;
 
@@ -40,7 +42,9 @@ int main(int argc, char** argv) {
             cout << "1.Administrador" <<endl;
             cout << "2.Mozo" << endl;
             cout << "3.Cargar datos de pruba" << endl;
-            cout << "4.Salir" << endl;
+            cout << "4.Modificar Fecha y Hora" << endl;
+            cout << "5.Fecha y Hora Actual" << endl;
+            cout << "6.Salir" << endl;
             cout << "Ingresar opcion: ";
             cin>>opcion;
             cout<<endl;
@@ -65,6 +69,14 @@ int main(int argc, char** argv) {
                             AltaEmpleado();
                             break;
                         case 4:
+                            Sistema::ModificarFechaHora();
+                            break;
+                        case 5:
+                            cout << "Fecha y hora del sistema actual" << endl;
+                            cout << *fabrica->getInstance().
+                            system("pause");
+                            break;
+                        case 6:
                             InformacionDeUnProducto();
                             break;
                         default:

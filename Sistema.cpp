@@ -36,6 +36,8 @@ Sistema::Sistema() {
     this->nombreEmpleado="";
     this->tipoEmpleado="";
     this->tipo=PIE;
+    this->deskRecordado= 0;
+    this->FechaHoraActual = NULL;
     //PRODUCTO DE PRUEBA,LUEGO BORRAR
     Comun* c = new Comun("1","milanesa",300);
     KeyString* key = new KeyString(c->getCodigo());
@@ -540,4 +542,43 @@ void Sistema::cancelarQuitarProducto(){
 
 void Sistema::olvidarMesa(){
     this->mesaRecordada = NULL;
+}
+void Sistema::ingresarDescuento(int desk){
+    this->deskRecordado = desk;    
+}
+void Sistema::generarFactura(){
+    cout<<"\n-----Facturacion de una Venta-----\n"<<endl;
+        cout<<"\nCodigo de la Venta: \n"<<this->mesaRecordada->getVenta()<<endl;
+        cout<<"\nFecha y hora de la Venta: \n"<<this->FechaHoraActual<<endl;
+        cout<<"\nNombre del Mozo: \n"<<this->mesaRecordada->getMozo()<<endl;
+
+
+            
+}
+void Sistema::FacturacionDeUnaVenta(){
+    int numero,desk;
+    string b;
+        cout<<"indique la mesa para emitir su factura: "<<endl;
+        cin>> numero;
+        this->seleccionarMesa(numero);
+        cout<<"desea agregar porcentaje de descuento? si/no";
+        cin>>b;
+    if(b=="si"){
+        cout<<"indique el porcentaje que desea agregar: "<<endl;
+        cin>>desk;
+        this->ingresarDescuento(desk);
+    }
+    this->generarFactura();
+}
+
+void Sistema::ModificarFechaHora(FechaHora * fecha) {
+    this->FechaHoraActual = fecha;
+}
+
+void Sistema::setFechaHoraActual(FechaHora* FechaHoraActual) {
+    this->FechaHoraActual = FechaHoraActual;
+}
+
+FechaHora* Sistema::getFechaHoraActual() const {
+    return FechaHoraActual;
 }

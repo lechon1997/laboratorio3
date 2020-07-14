@@ -22,6 +22,7 @@ using namespace std;
 class Mesa:public ICollectible{
     private:
         int numero;
+        Mozo * mozo;
         VentaLocal* ventaL;
         Venta* venta;
     public:
@@ -30,6 +31,9 @@ class Mesa:public ICollectible{
          VentaLocal* getVentaL();
          void setVentaL(VentaLocal*);
          Venta* getVenta();
+         void setMozo(Mozo* mozo);
+         Mozo* getMozo() const;
+         
 };
 
 #endif

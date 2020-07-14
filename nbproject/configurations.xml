@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
-    <logicalFolder name="f1"
-                   displayName="Header Colecciones"
-                   projectFiles="true"
-                   kind="ROOT">
+    <logicalFolder name="f1" displayName="Header Colecciones" projectFiles="true">
       <itemPath>ICollectible.h</itemPath>
       <itemPath>ICollection.h</itemPath>
       <itemPath>IDictionary.h</itemPath>
@@ -28,9 +25,11 @@
       <itemPath>Empleado.h</itemPath>
       <itemPath>Fabrica.h</itemPath>
       <itemPath>Factura.h</itemPath>
+      <itemPath>FechaHora.h</itemPath>
       <itemPath>ISistema.h</itemPath>
       <itemPath>Menu.h</itemPath>
       <itemPath>Mesa.h</itemPath>
+      <itemPath>ModificarFechaHora.h</itemPath>
       <itemPath>Mozo.h</itemPath>
       <itemPath>Producto.h</itemPath>
       <itemPath>Repartidor.h</itemPath>
@@ -51,10 +50,7 @@
                    displayName="Resource Files"
                    projectFiles="true">
     </logicalFolder>
-    <logicalFolder name="f2"
-                   displayName="Source Colecciones"
-                   projectFiles="true"
-                   kind="ROOT">
+    <logicalFolder name="f2" displayName="Source Colecciones" projectFiles="true">
       <itemPath>ICollectible.cpp</itemPath>
       <itemPath>IDictionary.cpp</itemPath>
       <itemPath>IKey.cpp</itemPath>
@@ -85,8 +81,10 @@
       <itemPath>Empleado.cpp</itemPath>
       <itemPath>Fabrica.cpp</itemPath>
       <itemPath>Factura.cpp</itemPath>
+      <itemPath>FechaHora.cpp</itemPath>
       <itemPath>Menu.cpp</itemPath>
       <itemPath>Mesa.cpp</itemPath>
+      <itemPath>ModificarFechaHora.cpp</itemPath>
       <itemPath>Mozo.cpp</itemPath>
       <itemPath>Producto.cpp</itemPath>
       <itemPath>Repartidor.cpp</itemPath>
@@ -157,6 +155,10 @@
       </item>
       <item path="Factura.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="FechaHora.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FechaHora.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ICollectible.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
@@ -214,6 +216,10 @@
       <item path="Mesa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Mesa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ModificarFechaHora.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ModificarFechaHora.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Mozo.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -314,6 +320,10 @@
       </item>
       <item path="Factura.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="FechaHora.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FechaHora.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ICollectible.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
@@ -371,6 +381,10 @@
       <item path="Mesa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Mesa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ModificarFechaHora.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ModificarFechaHora.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Mozo.cpp" ex="false" tool="1" flavor2="0">
       </item>

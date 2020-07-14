@@ -47,6 +47,10 @@ public:
     virtual void confirmarQuitarProducto()=0;
     virtual void cancelarQuitarProducto()=0;
     virtual void olvidarMesa()=0;
+    virtual void Sistema::FacturacionDeUnaVenta()=0;
+    virtual void Sistema::ingresarDescuento(int)=0;
+    virtual void Sistema::generarFactura()=0;
+    virtual void Sistema::ModificarFechaHora(FechaHora *)=0;
 };
 #endif /* ISISTEMA_H */
 

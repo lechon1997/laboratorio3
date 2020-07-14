@@ -29,6 +29,8 @@ private:
     int numeroEmpleado;
     int numeroVenta;
     int cantidad;
+    int deskRecordado;
+    FechaHora* FechaHoraActual;
     Sistema();
     
 public:
@@ -68,6 +70,12 @@ public:
     void confirmarQuitarProducto();
     void cancelarQuitarProducto();
     void olvidarMesa();
+    void Sistema::FacturacionDeUnaVenta();
+    void Sistema::ingresarDescuento(int);
+    void Sistema::generarFactura();
+    void Sistema::ModificarFechaHora(FechaHora *);
+    void setFechaHoraActual(FechaHora* FechaHoraActual);
+    FechaHora* getFechaHoraActual() const;
 };
  
 

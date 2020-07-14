@@ -45,6 +45,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Empleado.o \
 	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/Factura.o \
+	${OBJECTDIR}/FechaHora.o \
 	${OBJECTDIR}/ICollectible.o \
 	${OBJECTDIR}/IDictionary.o \
 	${OBJECTDIR}/IKey.o \
@@ -58,6 +59,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/ListaIterator.o \
 	${OBJECTDIR}/Menu.o \
 	${OBJECTDIR}/Mesa.o \
+	${OBJECTDIR}/ModificarFechaHora.o \
 	${OBJECTDIR}/Mozo.o \
 	${OBJECTDIR}/Nodo.o \
 	${OBJECTDIR}/NodoDicc.o \
@@ -144,6 +146,11 @@ ${OBJECTDIR}/Factura.o: Factura.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Factura.o Factura.cpp
 
+${OBJECTDIR}/FechaHora.o: FechaHora.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FechaHora.o FechaHora.cpp
+
 ${OBJECTDIR}/ICollectible.o: ICollectible.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -208,6 +215,11 @@ ${OBJECTDIR}/Mesa.o: Mesa.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mesa.o Mesa.cpp
+
+${OBJECTDIR}/ModificarFechaHora.o: ModificarFechaHora.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ModificarFechaHora.o ModificarFechaHora.cpp
 
 ${OBJECTDIR}/Mozo.o: Mozo.cpp
 	${MKDIR} -p ${OBJECTDIR}
