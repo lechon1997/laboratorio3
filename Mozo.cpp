@@ -28,3 +28,8 @@ DtMozo* Mozo::toDTMozo(){
 IDictionary* Mozo::getMesas(){
     return this->mezas;
 }
+
+void Mozo::addMesa(Mesa* m,int k){
+    KeyInt* key = new KeyInt(k);
+    this->mezas->add(m,key);
+}

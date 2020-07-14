@@ -433,6 +433,6 @@ void AsignarMozosAMesas(){
     
     Sistema->AsignarMozosAMesasAuto();
     
-    cout<<"\n Mesas asignadas correctamente.\n"<<endl;
+    cout<<"\n------Mesas asignadas correctamente ------\n"<<endl;
     
 }

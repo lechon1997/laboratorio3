@@ -14,6 +14,7 @@
 #include <cstddef>
 #include <iostream>
 #include <valarray>
+//#include <bits/unordered_set.h>
 #include "Mesa.h"
 
 
@@ -55,24 +56,28 @@ Sistema::Sistema() {
     cout<<"1";
     //mozo y mesas de prueba
     Mozo* m1= new Mozo(1,"Sergio Vergara Telechea");
+    m1->setTipo(true);
     KeyInt* keym1 = new KeyInt(m1->getNumero());
     this->empleados->add(m1,keym1);
     
 
-    IDictionary* mesas1 = new ListDicc;
+  //  IDictionary* mesas1 = new ListDicc;
     Mesa* mesa1 = new Mesa(1);
     KeyInt* keymesa1 = new KeyInt(1);
-    mesas1->add(mesa1,keymesa1);
+    this->mesas->add(mesa1,keymesa1);
+   // mesas1->add(mesa1,keymesa1);
 
     Mesa* mesa2 = new Mesa(2);
     KeyInt* keymesa2 = new KeyInt(2);
-    mesas1->add(mesa2,keymesa2);
+    this->mesas->add(mesa2,keymesa2);
+   // mesas1->add(mesa2,keymesa2);
 
     Mesa* mesa3 = new Mesa(14);
     KeyInt* keymesa3 = new KeyInt(14);
-    mesas1->add(mesa3,keymesa3);
+    this->mesas->add(mesa3,keymesa3);
+  //  mesas1->add(mesa3,keymesa3);
 
-    m1->setMesas(mesas1);
+   // m1->setMesas(mesas1);
     
 }
 
@@ -456,13 +461,43 @@ void Sistema::AsignarMesas(DtMozo* dtmozo1,IDictionary* mesas){
 }
 
 void Sistema::AsignarMozosAMesasAuto(){
-    int mozos, mesas, result;
-    
-    mozos=this->empleados->size();
+    int mozos=0, mesas, result;
+    IDictionary* mozosDic = new ListDicc;
+    IIterator* it= this->empleados->getIteratorObj();
+    while(it->hasNext()){
+        Empleado* e = (Empleado*) it->getCurrent();
+        if(e->getTipo()==true){
+            mozos++;
+            Mozo* m = (Mozo*) it->getCurrent();
+            KeyInt* mKey= new KeyInt(m->getNumero());
+            mozosDic->add(m,mKey);
+        }
+        it->next();
+    }
     
     mesas=this->mesas->size();
     
     result=floor(mesas/mozos);
     
-    //while(result)
+    IIterator* itmozos= mozosDic->getIteratorObj();
+    IIterator* itmesas = this->mesas->getIteratorObj();
+    
+    while(itmozos->hasNext()){
+        
+        Mozo* mozo = (Mozo*) itmozos->getCurrent();
+        if(itmesas->hasNext()){
+        
+        for(int i=0; i<result; i++){
+            Mesa* mesa = (Mesa*) itmesas->getCurrent();    
+            
+            mozo->addMesa(mesa,mesa->getNumero());
+            itmesas->next();
+        }
+        
+        }
+        
+        itmozos->next();
+        
+    }
+    
 }
