@@ -573,8 +573,15 @@ void Sistema::generarFactura(){
         cout<<"\nCodigo de la Venta: \n"<<this->mesaRecordada->getVenta()<<endl;
         cout<<"\nFecha y hora de la Venta: \n"<<this->FechaHoraActual<<endl;
         cout<<"\nNombre del Mozo: \n"<<this->mesaRecordada->getMozo()<<endl;
-
-
+        cout<<"\nProductos Consumidos: \n"<<this->listarProductosVenta()<<endl;
+        cout<<"\nSubtotal de la Venta: \n"<<this->mesaRecordada->getVenta()->getSubtotal()<<endl;
+        cout<<"\nDescuento de la Venta: \n"<<this->mesaRecordada->getVenta()->getDescuento()<<endl;
+        cout<<"\nMonto total de la Venta: \n"<<this->mesaRecordada->getVenta()->getMontoTotal()<<endl;
+        int mt = this->mesaRecordada->getVenta()->getMontoTotal();
+        int iva = this->mesaRecordada->getVenta()->getIva();
+        int mtiva = mt + iva;
+        cout<<"\nMonto total de la Venta: \n"<<mtiva<<endl;
+        
             
 }
 void Sistema::FacturacionDeUnaVenta(){
