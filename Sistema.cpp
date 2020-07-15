@@ -580,9 +580,8 @@ void Sistema::generarFactura(){
         int mt = this->mesaRecordada->getVenta()->getMontoTotal();
         int iva = this->mesaRecordada->getVenta()->getIva();
         int mtiva = mt + iva;
-        cout<<"\nMonto total de la Venta: \n"<<mtiva<<endl;
-        
-            
+        cout<<"\nMonto total de la Venta mas IVA: \n"<<mtiva<<endl;
+                    
 }
 void Sistema::FacturacionDeUnaVenta(){
     int numero,desk;
